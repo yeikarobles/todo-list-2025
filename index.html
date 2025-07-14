@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>###</h1>
+    </header>
+
+    <main>
+      <input id="addtask" placeholder="add task" />
+      <button id="add">Agregar</button>
+      <table>
+        <caption></caption>
+        <thead>
+          <tr>
+            <th>status</th>
+            <th>task name</th>
+            <th>priority</th>
+            <th>due date</th>
+            <th>actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="status">
+              <select name="" id="status">
+                <option value="paused">paused</option>
+                <option value="in progress">in progress</option>
+                <option value="completed">completed</option>
+              </select>
+            </td>
+            <td id="dataName">recoger Samira</td>
+            <td id="priority">
+              <select name="" id="priority">
+                <option value="high">high</option>
+                <option value="medium">medium</option>
+                <option value="low">low</option>
+              </select>
+            </td>
+            <td id="dueDate">
+              <input type="date" />
+            </td>
+            <td id="actions">
+              <button>edit</button>
+              <button>delete</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot></tfoot>
+      </table>
+    </main>
+
+    <footer>
+      <p>yeika</p>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
