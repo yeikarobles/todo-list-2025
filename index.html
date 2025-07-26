@@ -3,47 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>To Do App</title>
   </head>
   <body>
     <header>
-      <h1>###</h1>
+      <h1>To Do App</h1>
     </header>
 
     <main>
       <input id="addtask" placeholder="add task" />
       <button id="add">Agregar</button>
       <table>
-        <caption></caption>
+        <caption>
+          TO DO LIST
+        </caption>
         <thead>
           <tr>
-            <th>status</th>
-            <th>task name</th>
-            <th>priority</th>
-            <th>due date</th>
-            <th>actions</th>
+            <th>Id</th>
+            <th>Task name</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Due date</th>
+            <th>Days Left</th>
+            <th>Notes</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td id="status">
-              <select name="" id="status">
-                <option value="paused">paused</option>
-                <option value="in progress">in progress</option>
-                <option value="completed">completed</option>
-              </select>
-            </td>
-            <td id="dataName">recoger Samira</td>
-            <td id="priority">
+            <td id="Id">#</td>
+            <td id="dataName">Recoger a Samira</td>
+            <td>
               <select name="" id="priority">
                 <option value="high">high</option>
                 <option value="medium">medium</option>
                 <option value="low">low</option>
               </select>
             </td>
-            <td id="dueDate">
-              <input type="date" />
+            <td>
+              <select name="" id="status">
+                <option value="notStarted">Not Started</option>
+                <option value="inProgress">In progress</option>
+                <option value="paused">Paused</option>
+                <option value="cancelled">Cancelled</option>
+                <option value="completed">Completed</option>
+              </select>
             </td>
+            <td>
+              <input type="date" id="dueDate" />
+            </td>
+            <td id="daysLeft">2 days left</td>
+            <td><textarea id="notes">Example notes</textarea></td>
             <td id="actions">
               <button>edit</button>
               <button>delete</button>
