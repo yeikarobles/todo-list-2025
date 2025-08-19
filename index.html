@@ -6,33 +6,36 @@
     <title>To Do App</title>
   </head>
   <body>
-    <header>
-      <h1>To Do App</h1>
-    </header>
-
+    <header></header>
     <main>
-      <input id="addtask" placeholder="add task" />
-      <button id="add">Agregar</button>
-      <table>
+      <div>
+        <button id="addTask">Add</button>
+      </div>
+      <table id="newTask">
         <caption>
-          TO DO LIST
+          Adding new task
         </caption>
         <thead>
           <tr>
-            <th>Id</th>
             <th>Task name</th>
             <th>Priority</th>
             <th>Status</th>
             <th>Due date</th>
             <th>Days Left</th>
+            <th>Category</th>
             <th>Notes</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td id="Id">#</td>
-            <td id="dataName">Recoger a Samira</td>
+            <td>
+              <textarea
+                type="text"
+                id="dataName"
+                placeholder="Enter task"
+              ></textarea>
+            </td>
             <td>
               <select name="" id="priority">
                 <option value="high">high</option>
@@ -46,17 +49,93 @@
                 <option value="inProgress">In progress</option>
                 <option value="paused">Paused</option>
                 <option value="cancelled">Cancelled</option>
-                <option value="completed">Completed</option>
               </select>
             </td>
             <td>
               <input type="date" id="dueDate" />
             </td>
             <td id="daysLeft">2 days left</td>
-            <td><textarea id="notes">Example notes</textarea></td>
+            <td>
+              <select name="" id="category">
+                <option value="">Business</option>
+                <option value="">Personal</option>
+                <option value="">Wellness</option>
+                <option value="">Family</option>
+                <option value="">Finance</option>
+              </select>
+            </td>
+            <td>
+              <textarea id="notes" placeholder="Example notes"></textarea>
+            </td>
             <td id="actions">
-              <button>edit</button>
-              <button>delete</button>
+              <button>Save</button>
+              <button>Cancel</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot></tfoot>
+      </table>
+
+      <table>
+        <caption>
+          To do list
+        </caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Task name</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Due date</th>
+            <th>Days Left</th>
+            <th>Category</th>
+            <th>Notes</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>
+              <input type="text" placeholder="Enter task" />
+            </td>
+            <td>
+              <select name="">
+                <option value="high">high</option>
+                <option value="medium">medium</option>
+                <option value="low">low</option>
+              </select>
+            </td>
+            <td>
+              <select name="">
+                <option value="notStarted">Not Started</option>
+                <option value="inProgress">In progress</option>
+                <option value="paused">Paused</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+            </td>
+            <td>
+              <input type="date" />
+            </td>
+            <td>2 days left</td>
+            <td>
+              <select name="">
+                <option value="">Business</option>
+                <option value="">Personal</option>
+                <option value="">Wellness</option>
+                <option value="">Family</option>
+                <option value="">Finance</option>
+              </select>
+            </td>
+            <td>
+              <textarea placeholder="Example notes"></textarea>
+            </td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+              <button>Save</button>
             </td>
           </tr>
         </tbody>
