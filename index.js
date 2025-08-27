@@ -3,25 +3,35 @@ let addButton;
 let dataInput;
 let cancelButton;
 
-let todos = [];
+let toDos = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   addButton = document.getElementById("addTask");
-  dataInput = document.getElementById("newTask");
+  dataInput = document.getElementById("newform");
   cancelButton = document.getElementById("cancelButton");
 
   dataInput.hidden = true;
   addButton.addEventListener("click", onAddButtonClick);
   cancelButton.addEventListener("click", onCancelButtonClick);
 
+  dataInput.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    for (let [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`);
+    }
+  });
+
   var saved = GetFromLocal("item");
 
   if (!saved) {
-    const jsonTodos = JSON.stringify(todos);
-    SaveOnLocal("item", jsonTodos);
+    const jsonToDos = JSON.stringify(toDos);
+    SaveOnLocal("item", jsonToDos);
   } else {
-    todos = JSON.parse(saved);
-    console.log(todos);
+    toDos = JSON.parse(saved);
+    console.log(toDos);
   }
 });
 
@@ -36,7 +46,7 @@ function onCancelButtonClick() {
 function onSaveButtonClick() {}
 
 const task = {
-  id: "",
+  id: "n",
   name: "",
   priority: "",
   status: "",
